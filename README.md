@@ -47,8 +47,4 @@ print(peter.rdf())  # Serialize to RDF (Turtle)
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Copyright
-
-Copyright (c) 2025 SINTEF
+This project is licensed under the MIT License. 
