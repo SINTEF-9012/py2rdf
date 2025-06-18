@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py2rdf"
+version = "0.1.0"
+authors = [
+    { name="An Lam", email="an.lam@sintef.no" }
+]
+description = "A Python library for mapping Python objects to RDF graphs using Pydantic and rdflib."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "rdflib>=7.0.0",
+    "pydantic>=2.9.2",
+    "typing-extensions>=4.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SINTEF-9012/py2rdf"
+Issues = "https://github.com/SINTEF-9012/py2rdf/issues"

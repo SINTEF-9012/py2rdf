@@ -9,14 +9,6 @@ A Python library for mapping Python objects to RDF graphs using Pydantic and rdf
 - Inheritance and mapping merging for subclassed models
 - Pydantic-based validation and type safety
 
-## Installation
-
-Install dependencies with pip:
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Usage Example
 
 ```python
@@ -42,9 +34,21 @@ class Person(RDFModel):
 # Create an instance
 peter = Person(name="Peter", age=30, uri=EX_NS.Peter)
 print(peter.rdf())  # Serialize to RDF (Turtle)
+
+# --- Deserialization Example ---
+from rdflib import Graph
+
+turtle_data = peter.rdf()
+g = Graph()
+g.parse(data=turtle_data, format="turtle")
+
+# Returns a dict of URI string to Person instance
+individuals = Person.deserialize(g, node_uri=EX_NS.Peter)
+peter_copy = individuals[str(EX_NS.Peter)]
+print(peter_copy)
 ```
 
 
 ## License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License.
