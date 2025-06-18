@@ -11,8 +11,10 @@ A Python library for mapping Python objects to RDF graphs using Pydantic and rdf
 
 ## Installation
 
+Install dependencies with pip:
+
 ```bash
-pip install rdflib pydantic
+pip install -r requirements.txt
 ```
 
 ## Usage Example
@@ -41,6 +43,7 @@ class Person(RDFModel):
 peter = Person(name="Peter", age=30, uri=EX_NS.Peter)
 print(peter.rdf())  # Serialize to RDF (Turtle)
 ```
+
 
 ## License
 
