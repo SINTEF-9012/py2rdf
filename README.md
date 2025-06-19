@@ -1,5 +1,9 @@
 # py2rdf
 
+[![PyPI version](https://img.shields.io/pypi/v/py2rdf.svg)](https://pypi.org/project/py2rdf/)
+[![PyPI downloads](https://pepy.tech/badge/py2rdf)](https://pepy.tech/project/py2rdf)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A Python library for mapping Python objects to RDF graphs using Pydantic and rdflib.
 
 ## Installation
